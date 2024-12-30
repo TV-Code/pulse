@@ -30,37 +30,52 @@ Setup
 
 Clone the repository:
 
-bashCopygit clone https://github.com/TV-Code/pulse.git
+```bash 
+git clone https://github.com/TV-Code/pulse.git
 cd pulse
-
+```
 Install dependencies:
-
-bashCopynpm install
+ 
+```bash 
+npm install
+```
 
 Create a .env file with your Firebase configuration:
 
-CopyVITE_FIREBASE_API_KEY=your_api_key
+```
+VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_domain
 VITE_FIREBASE_DATABASE_URL=your_database_url
 VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+```
 
 Start the development server:
 
-bashCopynpm run dev
+```bash 
+npm run dev
+```
+
 Building
 To create a production build:
-bashCopynpm run build
+```bash 
+npm run build
+```
+
 Deployment
 The project is set up for automatic deployment to Firebase Hosting via GitHub Actions. Every push to the main branch triggers a deployment.
 Manual deployment:
-bashCopynpm run build
+```bash 
+npm run build
 firebase deploy
 Firebase Configuration
+```
 The project uses Firebase Realtime Database with the following security rules:
-jsonCopy{
+
+```json 
+{
   "rules": {
     "pulses": {
       ".read": true,
@@ -81,6 +96,7 @@ jsonCopy{
     }
   }
 }
+```
 Privacy
 
 Location data is approximate and users can contribute without sharing precise location
